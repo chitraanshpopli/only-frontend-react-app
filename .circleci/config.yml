@@ -1,10 +1,9 @@
 version: 2
 jobs:
   build:
-    build:
-      branches:
-        only:
-          - master
+    branches:
+      only:
+        - master
     docker:
       - image: circleci/node:12.2.0
 
