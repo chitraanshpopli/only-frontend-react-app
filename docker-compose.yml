@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+
+  uiapp:
+    container_name: uiapp
+    build:
+      context: .
+      dockerfile: ui-dockerfile-dev
+    volumes:
+      - '.:/app'
+      - '/app/node_modules/'
+    ports:
+      - '3001:3000'
+    environment:
+      - NODE_ENV=development

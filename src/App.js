@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './resources/scss/index.scss';
+import Translations from "./resources/js/common/translations";
+import $ from 'jquery';
+import Backbone from 'backbone';
+// eslint-disable-next-line no-unused-vars
+import BackboneXhrEvents from 'backbone-xhr-events';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+$(document).ready(() => {
+  (new Translations()).init();
 
-export default App;
+  Backbone.xhrEvents.on('xhr', (context) => {
+    context.on('before-send', () => {
+      if (!context.options.doNotScroll) {
+        $(window).scrollTop(0);
+      }
+      $('#loader').hidden = false;
+    });
+    context.on('complete', () => {
+      $('#loader').hidden = true;
+    });
+  });
+});

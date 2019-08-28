@@ -1,0 +1,427 @@
+@import "_variable.scss";
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.font-size-10 {font-size: 10px;}
+.font-size-20 {font-size: 20px;}
+.font-size-13 {font-size: 13px;}
+.font-size-15 {font-size: 15px;}
+.normal-font {font-weight: normal;}
+.bold-font {font-weight: bold;}
+input::placeholder{font-size: 5px;}
+.checkbox-small{
+  height:12px;
+  width:12px;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  top: 0;
+  position: fixed;
+  background: rgba(162, 140, 124, 0.23);
+  z-index: 4999;
+  margin: 1px auto;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.margin-right-1 {margin-right: 1%;}
+.margin-right-2 {margin-right: 2%;}
+.margin-right-4 {margin-right: 4%;}
+.margin-right-10 {margin-right: 10%;}
+.margin-right-50 {margin-right: 50%;}
+.margin-right-70 {margin-right: 70%;}
+
+.margin-left-0 {margin-left: 0%;}
+.margin-left-2 {margin-left: 2%;}
+.margin-left-5 {margin-left: 5%;}
+.margin-left-6 {margin-left: 6%;}
+.margin-left-8 {margin-left: 8%;}
+.margin-left-10 {margin-left: 10%;}
+.margin-left-12 {margin-left: 12%;}
+.margin-left-15 {margin-left: 15%;}
+.margin-left-17 {margin-left: 16.7%;}
+.margin-left-20 {margin-left: 20%;}
+.margin-left-30 {margin-left: 30%;}
+.margin-left-35 {margin-left: 35%;}
+.margin-left-40 {margin-left: 39%;}
+.margin-left-55 {margin-left: 55%;}
+.margin-left-75 {margin-left: 75%;}
+.margin-left-80 {margin-left: 80%;}
+.margin-left-85 {margin-left: 85%;}
+.margin-left-90 {margin-left: 90%;}
+.margin-left-100 {margin-left: 100%;}
+
+.margin-top-1 {margin-top: 1%;}
+.margin-top-2 {margin-top: 2%;}
+.margin-top-3 {margin-top: 3%;}
+.margin-top-4 {margin-top: 4%;}
+.margin-top-5 {margin-top: 5%;}
+.margin-top-7 {margin-top: 7%;}
+.margin-top-10 {margin-top: 10%;}
+.margin-top-15 {margin-top: 15%;}
+.margin-top-20 {margin-top: 20%;}
+.margin-top-30 {margin-top: 30%;}
+.margin-top-40 {margin-top: 40%;}
+.margin-top-forty {margin-top: 40px;}
+.margin-top-fifty {margin-top: 50px;}
+
+.margin-bottom-0{margin-bottom: 0% !important;}
+.margin-bottom-1{margin-bottom: 1%;}
+.margin-bottom-3{margin-bottom: 3%;}
+.margin-bottom-5 {margin-bottom: 5%;}
+.margin-bottom-10 {margin-bottom: 10%;}
+.margin-bottom-20{margin-bottom: 20%;}
+.margin-bottom-40{margin-bottom: 40% !important;}
+.margin-bottom-50{margin-bottom: 50% !important;}
+.margin-bottom-60{margin-bottom: 60% !important;}
+.margin-bottom-80 {margin-bottom: 80%;}
+
+.width-5 {width: 5%;}
+.width-6 {width: 6%;}
+.width-10 {width: 10%;}
+.width-15{width:15%;}
+.width-17{width:20%;}
+.width-20 {width: 20%;}
+.width-20-i {width: 20% !important;}
+.width-25 {width: 25%;}
+.width-30 {width: 30%;}
+.width-35-i {width: 35% !important;}
+.width-40 {width: 40%;}
+.width-45-i {width: 40% !important;}
+.width-45 {width: 45%;}
+.width-45-i {width: 45% !important;}
+.width-50 {width: 50%;}
+.width-60 {width: 60%;}
+.width-65 {width: 65%;}
+.width-70 {width: 70%;}
+.width-75-i{width: 75% !important;}
+.width-80 {width: 80%;}
+.width-83 {width: 83%;}
+.width-85 {width: 85%;}
+.width-90 {width: 90%;}
+.width-95 {width: 95%;}
+.width-100 {width: 100%;}
+.width-300 {width: 300px;}
+.width-500 {width: 500px;}
+
+.background-black {background: #434443;}
+
+input[type="email"], textarea {background-color:#ffffff;}
+
+input[type="password"], textarea {background-color : #ffffff;}
+
+
+.input-background{background-color: #ffffff !important;}
+.black-field-border {border: 1px black solid !important;}
+.field-with-error {border: 1px red solid !important;}
+.red-color {color: red;}
+.grey-color {color: lightgrey;}
+.input-field{width:60%;}
+.align-center {text-align: center;}
+.login-background{background-color: white;}
+.header-background{
+  background: #f9fafc;
+  z-index: 10;
+}
+.login-box {
+  border: 1px grey solid !important;
+  box-shadow: 5px 10px grey;
+}
+.custom-hr-tag{
+  border-bottom-color: #c0c2c4;
+  border-style:solid;
+  border-bottom-width: 1px;
+  border-left-width: 0px;
+  border-right-width:  0px;
+  border-top-width:  0px;
+}
+.mandatory {
+  background-color: #FFFFFF;
+  color: #FF0000;
+}
+.row-width{
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+.center-table{
+  margin-top: 5%;
+  align-content: center;
+}
+.border-1{border: 1px solid;}
+
+.padding-left-0 {padding-left: 0% !important;}
+.padding-left-5 {padding-left: 5% !important;}
+.padding-left-10 {padding-left: 10% !important;}
+.padding-left-15 {padding-left: 15% !important;}
+.padding-left-25 {padding-left: 25% !important;}
+.padding-left-30 {padding-left: 30% !important;}
+
+.padding-right-0 {padding-right: 0% !important;}
+.padding-right-5 {padding-right: 5% !important;}
+.padding-right-10 {padding-right: 10% !important;}
+.padding-right-15 {padding-right: 15% !important;}
+.padding-right-30 {padding-right: 30% !important;}
+
+.height-5{height:5%;}
+.height-36{height: 36%;}
+.height-38{height: 38px;}
+.height-90{height: 90%;}
+.height-92-7{height: 100%;}
+.height-100{height: 100%;}
+
+.margin-top-0-5 {
+  margin-top: 0.1%;
+  margin-right: 4%;
+}
+.heading{
+  text-align: center;
+  margin-top:8%;
+}
+.logo-container{
+  margin-top:3%;
+  margin-left:15%;
+  align-content: center;
+}
+.login-logo-container{
+  margin-top:15%;
+  margin-left:5%;
+  align-content: center;
+}
+.logo-style{
+  height:44%;
+  width:80%;
+}
+.leftnav-font{
+  color: white;
+  font-size: 15px;
+  margin-left: 10%;
+}
+.leftnav-drop-font{
+  color: white;
+  font-size: 12px;
+}
+.leftnav-downArrow{
+  margin-top: 0.1%;
+  margin-right: 4%;
+  color:white;
+}
+.leftnav-dropdown-option{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  margin-bottom: 0% !important;
+  padding-left: 25% !important;
+}
+.fill-container-top-bottom{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.fill-container-left-right{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.icon-style{
+  size:10px;
+  color: white;
+}
+.login-icon-style{
+  color: red;
+}
+.header-style{
+  position:fixed;
+  z-index: 10;
+  width: 85%;
+}
+.absolute-position{position:absolute;}
+.fixed-position{position:fixed;}
+.side-nav{
+  position: fixed !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: #262f3d;
+}
+.dropbtn {
+  width:80%;
+  font-size: 16px;
+  border: none;
+  padding: 5px 10px 0;
+}
+.dropdown {
+  text-align-last: right;
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  width:70%;
+  float: right;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {display: block;}
+
+.panel-danger {
+  border: 1px solid $primary-color !important;
+  color: $primary-color;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 50px !important;
+}
+
+.panel {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.panel-body {
+  padding: 15px;
+}
+
+.panel-body:before, .panel-body:after {
+  display: table;
+  content: " ";
+}
+
+.panel-body:after {
+  clear: both;
+}
+
+
+.table-listing td:first-child, .table-listing th:first-child {
+  padding-left: 23px;
+}
+
+.table-listing td:last-child, .table-listing th:last-child {
+  padding-right: 15px;
+}
+
+.table {
+  margin-top: 10px;
+}
+
+.table > thead > tr > th {
+  vertical-align: middle;
+}
+
+.table-listing .table-content td {
+  line-height: 24px;
+  letter-spacing: 0.3px;
+}
+
+.table-listing .column-headers th {
+  font-weight: normal;
+  color: #BDBDBD;
+}
+
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+  width: unset !important;
+}
+
+.btn-primary {
+  background-color: white !important;
+  border-color: $primary-color !important;
+  color: gray !important;
+  box-shadow: none !important;
+}
+
+.btn-primary:hover {
+  background-color: $primary-color !important;
+  border-color: $primary-color !important;
+  color: white !important;
+  box-shadow: none !important;
+}
+
+input {
+  box-shadow: none !important;
+  border-color: $primary-color !important;
+}
+
+.css-yk16xz-control{
+  background-color: white !important;
+  border-color: $primary-color !important;
+  color: gray !important;
+  box-shadow: none !important;
+}
+
+.css-1pahdxg-control:hover{
+  background-color: white !important;
+  border-color: $primary-color !important;
+  color: gray !important;
+}
+
+.css-tlfecz-indicatorContainer{
+  background-color: $primary-color !important;
+  color: white !important;
+}
+
+.css-1okebmr-indicatorSeparator {
+  background-color: white !important;
+}
+
+.primary-text {
+  color: $primary-color;
+}
