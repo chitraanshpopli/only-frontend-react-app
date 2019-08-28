@@ -13,7 +13,7 @@ export default class RenderData extends Page {
     renderButton(model) {
         const state = JSON.stringify({
             repositoryDataIndex: model,
-            searchResults: this.props.searchResults,
+            records: this.props.records,
             filter: this.props.filter,
         });
         return (
@@ -47,7 +47,7 @@ export default class RenderData extends Page {
             <div className="col-8 offset-2 margin-top-2">
                 <TableListing
                     columnHeaders={headers}
-                    collection={this.props.searchResults}
+                    collection={this.props.records}
                     attributes={attributes}
                     styles={styles}
                 />

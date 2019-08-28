@@ -12,7 +12,7 @@ export default class RepoInfo extends Page{
         const data = JSON.parse(this.props.location.state);
         this.state = {
             index:new Record(data.repositoryDataIndex),
-            searchResults:new Records(data.searchResults),
+            records:new Records(data.records),
             filter:new Filter(data.filter)
         };
         _.bindAll(this, 'createRow');

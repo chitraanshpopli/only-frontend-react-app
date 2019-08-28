@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from "react-redux";
 import _ from 'underscore';
 import RenderData from './render_data';
 import RenderFilter from "./render_filter";
@@ -6,24 +7,25 @@ import Records from "../../collection/records";
 import Filter from "../model/filter";
 import Page from "./common/page";
 import ErrorMessage from "./common/error_message";
+import Action from "../../redux/action";
 
-export default class List extends Page{
+class List extends Page{
     constructor(props){
         super(props);
         this.state={
-            searchResults: new Records(),
+            records: new Records(),
             filter: new Filter({sortBy: {value:"score",label:"Score"}}),
             errorMessages: {}
         };
         if(this.props.location.state!==undefined){
             const data = JSON.parse(this.props.location.state);
             this.state={
-                searchResults:new Records(data.searchResults),
+                records:new Records(data.records),
                 filter:new Filter(data.filter),
                 errorMessages: {}
             }
         }
-        _.bindAll(this, 'changeFilterParameters', 'search', 'changeSort');
+        _.bindAll(this, 'search', 'onSortChange', 'onKeywordChange');
     }
 
     search(){
@@ -35,7 +37,7 @@ export default class List extends Page{
             success: () => {
                 records.comparator = this.state.filter.get('sortBy')["value"];
                 records.sort();
-                this.setState({searchResults:records, errorMessages: {}});
+                this.setState({records:records, errorMessages: {}});
             },
             error: () => {
                 this.setState({errorMessages: {main: "SERVER_ERROR_TRY_LATER"}});
@@ -43,20 +45,22 @@ export default class List extends Page{
         });
     }
 
-    changeSort(sort){
-        const searchResults = this.state.searchResults;
-        searchResults.comparator = sort["value"];
-        searchResults.sort();
+    onSortChange(sort){
+        const records = this.state.records;
+        records.comparator = sort["value"];
+        records.sort();
         const filter = this.state.filter;
         filter.set({sortBy: sort});
-        this.setState({searchResults, filter});
+        this.setState({records, filter});
     }
 
-
-    changeFilterParameters(key, value){
-        const newFilter = this.state.filter;
-        newFilter.set({[key]: value});
-        this.setState({ filter: newFilter })
+    //
+    onKeywordChange(event){
+        const r=this.props.updateKeyword(event.target.value);
+        debugger;
+        // const newFilter = this.state.filter;
+        // newFilter.set({[key]: value});
+        // this.setState({ filter: newFilter })
     }
 
     render(){
@@ -69,8 +73,8 @@ export default class List extends Page{
                     <RenderFilter
                         searchClick={this.search}
                         {...this.state}
-                        changeFilter={this.changeFilterParameters}
-                        onSortChange={this.changeSort}
+                        onKeywordChange={this.onKeywordChange}
+                        onSortChange={this.onSortChange}
                         setError={this.setError}
                     />
                     <RenderData
@@ -82,3 +86,17 @@ export default class List extends Page{
         )
     }
 }
+
+const mapStateToProps = state => ({
+    filter: state.filter
+});
+
+const mapDispatchToProps = dispatch => ({
+    updateKeyword: item => dispatch(Action.changeKeyword(item)),
+    changeSortBy: id => dispatch(Action.changeSortBy(id))
+});
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(List);

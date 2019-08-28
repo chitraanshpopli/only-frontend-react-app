@@ -35,7 +35,7 @@ export default class RenderFilter extends Page{
                         id="input-github"
                         type="text"
                         className="form-control"
-                        onChange={(event) => this.props.changeFilter("keyword", event.target.value)}
+                        onChange={this.props.onKeywordChange}
                         value={this.props.filter.get('keyword')}
                     />
                 </div>
