@@ -22,15 +22,9 @@ export default class RenderFilter extends Page{
     }
 
     render(){
-        let options = [
-            {value:"score",label:"Score"},
-            {value:"name",label:"Name"},
-            {value:"watcher",label:"Watch"},
-            {value:"forks",label:"Forks"}
-        ];
         return(
             <div className="row margin-top-3">
-                <div className="col-3 offset-md-3">
+                <div className="col-md-3 offset-md-4 col-6 offset-2">
                     <input
                         id="input-github"
                         type="text"
@@ -39,15 +33,7 @@ export default class RenderFilter extends Page{
                         value={this.props.filter.get('keyword')}
                     />
                 </div>
-                <div className="col-2">
-                        <Select
-                        multi={false}
-                        options={options}
-                        onChange={this.props.onSortChange}
-                        value={this.props.filter.get('sortBy')}
-                    />
-                </div>
-                <div className="col-1">
+                <div className="col-md-1 col-3">
                     <button
                         className="btn btn-primary width-90 margin-left-5"
                         onClick={this.searchClick}

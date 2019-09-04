@@ -397,6 +397,7 @@ input[type="password"], textarea {background-color : #ffffff;}
 
 input {
   box-shadow: none !important;
+  outline: 0;
   border-color: $primary-color !important;
 }
 
@@ -424,4 +425,16 @@ input {
 
 .primary-text {
   color: $primary-color;
+}
+
+.no-outline {
+  outline: 0 !important;
+}
+
+.thin-font {
+  font-weight: 200;
+}
+
+.bold-font {
+  font-weight: 400;
 }

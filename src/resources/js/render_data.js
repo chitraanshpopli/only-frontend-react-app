@@ -18,7 +18,7 @@ export default class RenderData extends Page {
         });
         return (
             <button
-                className="btn-sm btn-primary"
+                className="btn-sm btn-primary no-outline"
                 onClick={() => this.navigate('/info', state)}
             >More</button>
         );
@@ -44,7 +44,7 @@ export default class RenderData extends Page {
             'col-md-2'
         ];
         return (
-            <div className="col-8 offset-2 margin-top-2">
+            <div className="col-md-8 offset-md-2 col-12 margin-top-2">
                 <TableListing
                     columnHeaders={headers}
                     collection={this.props.searchResults}

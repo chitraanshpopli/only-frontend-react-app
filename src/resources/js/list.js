@@ -61,10 +61,10 @@ export default class List extends Page{
 
     render(){
         return(
-            <div className="margin-bottom-10">
+            <div>
                 <ErrorMessage message={this.state.errorMessages.main}/>
                 <center>
-                    <h1 className="margin-top-2 primary-text">Github !</h1>
+                    <h1 className="margin-top-2 primary-text thin-font">Github !</h1>
                 </center>
                     <RenderFilter
                         searchClick={this.search}
@@ -77,7 +77,13 @@ export default class List extends Page{
                         {...this.state}
                         history={this.props.history}
                     />
-                    <div id="loader" className="margin-top-3 loader" hidden />
+                <div id="loader" className="margin-top-3 loader" hidden />
+                <p className="margin-top-5">
+                    <center className="thin-font">
+                        This website is designed, developed, tested and deployed by
+                        <span className="primary-text bold-font"> Sandal Jain </span>
+                    </center>
+                </p>
             </div>
         )
     }
