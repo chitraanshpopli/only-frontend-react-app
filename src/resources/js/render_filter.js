@@ -24,7 +24,7 @@ export default class RenderFilter extends Page{
     render(){
         return(
             <div className="row margin-top-3">
-                <div className="col-md-3 offset-md-4 col-6 offset-2">
+                <div className="col-md-3 offset-md-4 col-6 offset-1">
                     <input
                         id="input-github"
                         type="text"
@@ -33,7 +33,7 @@ export default class RenderFilter extends Page{
                         value={this.props.filter.get('keyword')}
                     />
                 </div>
-                <div className="col-md-1 col-3">
+                <div className="col-md-1 col-4">
                     <button
                         className="btn btn-primary width-90 margin-left-5"
                         onClick={this.searchClick}
