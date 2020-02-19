@@ -64,7 +64,7 @@ export default class List extends Page{
             <div>
                 <ErrorMessage message={this.state.errorMessages.main}/>
                 <center>
-                    <h1 className="margin-top-2 primary-text thin-font">Github !</h1>
+                    <h1 className="margin-top-2 primary-text thin-font">Hello Flutter Devs !</h1>
                 </center>
                     <RenderFilter
                         searchClick={this.search}
