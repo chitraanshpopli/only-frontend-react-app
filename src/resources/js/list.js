@@ -84,8 +84,10 @@ export default class List extends Page{
                 <div id="loader" className="margin-top-3 loader" hidden />
                 <p className="margin-top-5 footer">
                     <center className="thin-font ">
-                        This website is designed, developed, tested and deployed by
-                        <span className="primary-text bold-font"> Sandal Jain </span>
+                        {'This website is designed, developed, tested and deployed by '}
+                        <span className="primary-text bold-font primary-text ">
+                            <a href="https://www.linkedin.com/in/eightbitguy/" target='_blank'>Sandal Jain</a>
+                        </span>
                     </center>
                 </p>
             </div>

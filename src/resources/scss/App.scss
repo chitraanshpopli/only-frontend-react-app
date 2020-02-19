@@ -431,8 +431,12 @@ input {
   background-color: white !important;
 }
 
+a:link, a:visited {
+  color: $primary-color !important;
+}​
+
 .primary-text {
-  color: $primary-color;
+  color: $primary-color !important;
 }
 
 .no-outline {
