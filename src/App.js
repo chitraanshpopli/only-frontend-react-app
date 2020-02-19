@@ -21,4 +21,4 @@ $(document).ready(() => {
   });
 });
 
-window.getApiUrl = () =>  '34.69.5.199:8000';
+window.getApiUrl = () =>  window.location.origin;
