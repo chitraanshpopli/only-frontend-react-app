@@ -7,6 +7,6 @@ export default class Records extends BaseCollection {
     }
 
     parse(response) {
-        return response.items;
+        return response;
     }
 }

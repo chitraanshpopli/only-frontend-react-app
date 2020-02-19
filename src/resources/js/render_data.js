@@ -27,15 +27,16 @@ export default class RenderData extends Page {
     render() {
         const headers = [
             'NAME',
-            'SCORE',
-            'FORKS',
-            'ACTION'
+            'HEIGHT',
+            'MARKS',
+            'ROLL_NUMBER'
         ];
         const attributes = [
             'name',
-            'score',
-            'forks',
-            this.renderButton
+            'height',
+            'marks',
+            'roll_number'
+            // this.renderButton
         ];
         const styles = [
             'col-md-2',

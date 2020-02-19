@@ -20,3 +20,5 @@ $(document).ready(() => {
     });
   });
 });
+
+window.getApiUrl = () =>  '34.69.5.199:8000';

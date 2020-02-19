@@ -29,12 +29,12 @@ export default class List extends Page{
     search(){
         const records = new Records();
         records.fetch({
-            url: 'https://api.github.com/search/repositories',
+            url: `http://${window.getApiUrl()}/api/students`,
             type: 'GET',
             data: {q:this.state.filter.get('keyword')},
             success: () => {
-                records.comparator = this.state.filter.get('sortBy')["value"];
-                records.sort();
+                // records.comparator = this.state.filter.get('sortBy')["value"];
+                // records.sort();
                 this.setState({searchResults:records, errorMessages: {}});
             },
             error: () => {
