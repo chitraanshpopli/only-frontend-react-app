@@ -26,6 +26,10 @@ export default class List extends Page{
         _.bindAll(this, 'changeFilterParameters', 'search', 'changeSort');
     }
 
+    componentWillMount() {
+        this.search();
+    }
+
     search(){
         const records = new Records();
         records.fetch({
@@ -78,8 +82,8 @@ export default class List extends Page{
                         history={this.props.history}
                     />
                 <div id="loader" className="margin-top-3 loader" hidden />
-                <p className="margin-top-5">
-                    <center className="thin-font">
+                <p className="margin-top-5 footer">
+                    <center className="thin-font ">
                         This website is designed, developed, tested and deployed by
                         <span className="primary-text bold-font"> Sandal Jain </span>
                     </center>
