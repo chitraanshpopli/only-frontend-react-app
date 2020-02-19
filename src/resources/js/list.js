@@ -33,7 +33,7 @@ export default class List extends Page{
     search(){
         const records = new Records();
         records.fetch({
-            url: `http://${window.getApiUrl()}/api/students`,
+            url: `${window.getApiUrl()}/api/students`,
             type: 'GET',
             data: {q:this.state.filter.get('keyword')},
             success: () => {
