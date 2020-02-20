@@ -21,4 +21,4 @@ $(document).ready(() => {
   });
 });
 
-window.getApiUrl = () =>  window.location.origin;
+window.getApiUrl = () =>  `http://${window.location.hostname}`;
