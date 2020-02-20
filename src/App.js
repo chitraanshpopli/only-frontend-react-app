@@ -21,4 +21,4 @@ $(document).ready(() => {
   });
 });
 
-window.getApiUrl = () =>  `http://${window.location.hostname}:${window.location.port}`;
+window.getApiUrl = () =>  `http://${window.location.hostname}:8000`;
