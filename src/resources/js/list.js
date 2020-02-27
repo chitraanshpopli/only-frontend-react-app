@@ -35,7 +35,7 @@ export default class List extends Page{
         records.fetch({
             url: `${window.getApiUrl()}/api/students`,
             type: 'GET',
-            data: {q:this.state.filter.get('keyword')},
+            data: {roll_number:this.state.filter.get('keyword')},
             success: () => {
                 // records.comparator = this.state.filter.get('sortBy')["value"];
                 // records.sort();
