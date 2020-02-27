@@ -26,6 +26,7 @@ export default class RenderFilter extends Page{
             <div className="row margin-top-3">
                 <div className="col-md-3 offset-md-4 col-6 offset-1">
                     <input
+                        placeholder="Search with Roll number"
                         id="input-github"
                         type="text"
                         className="form-control"
@@ -37,7 +38,7 @@ export default class RenderFilter extends Page{
                     <button
                         className="btn btn-primary width-90 margin-left-5"
                         onClick={this.searchClick}
-                    >Search using Roll number</button>
+                    >Search</button>
                 </div>
             </div>
         )
