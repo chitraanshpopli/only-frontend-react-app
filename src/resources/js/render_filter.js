@@ -11,13 +11,13 @@ export default class RenderFilter extends Page{
     }
 
     searchClick(){
-        const filter = this.props.filter;
-        const error = filter.validate();
-        if(error.length) {
-            const errorMessage = this.getFirstMessage(error);
-            this.props.setError({main: errorMessage});
-            return;
-        }
+        // const filter = this.props.filter;
+        // const error = filter.validate();
+        // if(error.length) {
+        //     const errorMessage = this.getFirstMessage(error);
+        //     this.props.setError({main: errorMessage});
+        //     return;
+        // }
         this.props.searchClick();
     }
 
@@ -37,7 +37,7 @@ export default class RenderFilter extends Page{
                     <button
                         className="btn btn-primary width-90 margin-left-5"
                         onClick={this.searchClick}
-                    >Search</button>
+                    >Search using Roll number</button>
                 </div>
             </div>
         )

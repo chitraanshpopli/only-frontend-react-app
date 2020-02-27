@@ -32,10 +32,14 @@ export default class List extends Page{
 
     search(){
         const records = new Records();
+        let data = {};
+        if (this.state.filter.get('keyword')) {
+            data= {roll_number:this.state.filter.get('keyword')};
+        }
         records.fetch({
             url: `${window.getApiUrl()}/api/students`,
             type: 'GET',
-            data: {roll_number:this.state.filter.get('keyword')},
+            data,
             success: () => {
                 // records.comparator = this.state.filter.get('sortBy')["value"];
                 // records.sort();
