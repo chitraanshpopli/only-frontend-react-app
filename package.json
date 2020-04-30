@@ -7,7 +7,7 @@
     "backbone-validation": "0.11.5",
     "backbone-xhr-events": "1.0.1",
     "bootstrap": "4.3.1",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "node-sass": "^4.12.0",
     "react": "16.9.0",
     "react-dom": "16.9.0",
